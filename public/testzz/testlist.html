@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Тестовый список полей</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 720px; margin: 32px auto; padding: 0 16px; }
+        h1 { font-size: 20px; }
+        .row { margin-bottom: 12px; }
+        label { display: inline-block; width: 220px; }
+        input, select { padding: 4px 8px; min-width: 240px; }
+        .hidden { display: none; }
+        .hint { color: #666; font-size: 13px; margin-top: 24px; }
+    </style>
+</head>
+<body>
+    <h1>Список полей в зависимости от выбранного типа</h1>
+
+    <form id="testform">
+        <div class="row">
+            <label for="type">Тип</label>
+            <select id="type" name="type">
+                <option value="user">user</option>
+                <option value="company">company</option>
+                <option value="address">address</option>
+                <option value="contact">contact</option>
+            </select>
+        </div>
+
+        <div class="row"><label>user_name</label><input type="text" name="user_name"></div>
+        <div class="row"><label>user_email</label><input type="text" name="user_email"></div>
+        <div class="row"><label>user_phone</label><input type="text" name="user_phone"></div>
+
+        <div class="row"><label>company_name</label><input type="text" name="company_name"></div>
+        <div class="row"><label>company_inn</label><input type="text" name="company_inn"></div>
+        <div class="row"><label>company_kpp</label><input type="text" name="company_kpp"></div>
+
+        <div class="row"><label>address_city</label><input type="text" name="address_city"></div>
+        <div class="row"><label>address_street</label><input type="text" name="address_street"></div>
+        <div class="row"><label>address_zip</label><input type="text" name="address_zip"></div>
+
+        <div class="row"><label>contact_phone</label><input type="text" name="contact_phone"></div>
+        <div class="row"><label>contact_email</label><input type="text" name="contact_email"></div>
+        <div class="row"><label>contact_skype</label><input type="text" name="contact_skype"></div>
+    </form>
+
+    <p class="hint">
+        Выберите значение в поле "Тип" — на странице останутся видны только те поля,
+        в атрибуте <code>name</code> которых содержится выбранное значение.
+    </p>
+
+    <script src="/js/testlist.js"></script>
+</body>
+</html>
